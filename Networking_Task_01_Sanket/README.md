@@ -13,7 +13,7 @@
 |---|------|-------|
 | 1 | Hostname (Device Name) | Sanket's MacBook Pro (`Sankets-MacBook-Pro.local`) |
 | 2 | IPv4 Address | `192.168.1.8` |
-| 3 | MAC Address | `9c:69:d3:79:13:f1` |
+| 3 | MAC Address | `1:1:1:1:1:1:1` |
 | 4 | Default Gateway | `192.168.1.1` |
 | 5 | DNS Server | `192.168.1.1` (router relay) + ISP IPv6 DNS: `2401:4900:50:9::7ad`, `2401:4900:50:9::7b5` |
 
