@@ -1,0 +1,61 @@
+Networking Task 01 — Command Outputs
+Device: Sanket's MacBook Pro (macOS)
+=====================================
+
+$ scutil --get ComputerName ; hostname
+Sanket's MacBook Pro (2)
+Sankets-MacBook-Pro.local
+
+Active interface: en7 (wired / USB-Ethernet)
+
+$ ipconfig getifaddr en7
+192.168.1.8
+
+$ ifconfig en7 | grep ether
+        ether 9c:69:d3:79:13:f1
+
+$ route -n get default | grep gateway
+    gateway: 192.168.1.1
+
+$ scutil --dns | grep nameserver | sort -u
+    nameserver[0] : 192.168.1.1
+    nameserver[0] : 2401:4900:50:9::7ad
+    nameserver[1] : 2401:4900:50:9::7b5
+
+=====================================
+
+$ ping -c 4 google.com
+PING google.com (142.250.134.113): 56 data bytes
+64 bytes from 142.250.134.113: icmp_seq=0 ttl=114 time=28.041 ms
+64 bytes from 142.250.134.113: icmp_seq=1 ttl=114 time=28.496 ms
+64 bytes from 142.250.134.113: icmp_seq=2 ttl=114 time=29.686 ms
+64 bytes from 142.250.134.113: icmp_seq=3 ttl=114 time=29.287 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 28.041/28.877/29.686/0.645 ms
+
+$ traceroute -w 2 -q 1 google.com
+traceroute to google.com (142.250.134.113), 64 hops max, 40 byte packets
+ 1  192.168.1.1 (192.168.1.1)  0.951 ms
+ 2  telemedia-ap-dynamic-255.255.170.122.airtelbroadband.in (122.170.255.255)  3.316 ms
+ 3  dsl-ncr-dynamic-229.127.16.125.airtelbroadband.in (125.16.127.229)  3.649 ms
+ 4  182.79.198.20 (182.79.198.20)  22.306 ms
+ 5  *
+ 6  *
+ 7  142.250.228.80 (142.250.228.80)  24.036 ms
+ 8  142.251.50.58 (142.251.50.58)  23.824 ms
+ 9  *
+10  192.178.254.228 (192.178.254.228)  28.601 ms
+11  142.251.229.165 (142.251.229.165)  23.817 ms
+12  142.250.236.126 (142.250.236.126)  31.481 ms
+13  *
+14  *
+15  *
+16  *
+17  *
+18  *
+19  fx-in-f113.1e100.net (142.250.134.113)  23.862 ms
+
+Result: ping successful (0% loss, ~28.9 ms avg). Destination reached at hop 19.
+

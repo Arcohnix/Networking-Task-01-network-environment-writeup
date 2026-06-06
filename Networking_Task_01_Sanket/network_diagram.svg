@@ -1,0 +1,59 @@
+<svg viewBox="0 0 780 760" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="780" height="760" fill="#f8fafc"/>
+
+  <text x="390" y="44" text-anchor="middle" font-size="26" font-weight="700" fill="#0f172a">Home Network Topology</text>
+  <text x="390" y="70" text-anchor="middle" font-size="14" fill="#64748b">How my device connects to the internet</text>
+
+  <!-- ===== INTERNET CLOUD ===== -->
+  <g>
+    <ellipse cx="390" cy="150" rx="120" ry="48" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="390" y="148" text-anchor="middle" font-size="20" font-weight="700" fill="#1e3a8a">Internet</text>
+    <text x="390" y="170" text-anchor="middle" font-size="12" fill="#3b82f6">(ISP / Public Network)</text>
+  </g>
+
+  <!-- arrow 1 -->
+  <line x1="390" y1="198" x2="390" y2="258" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="390,266 384,254 396,254" fill="#475569"/>
+  <text x="406" y="234" font-size="12" fill="#64748b">Public IP (WAN side)</text>
+
+  <!-- ===== ROUTER ===== -->
+  <g>
+    <rect x="270" y="266" width="240" height="92" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="390" y="298" text-anchor="middle" font-size="18" font-weight="700" fill="#92400e">Router / Wi-Fi Modem</text>
+    <text x="390" y="322" text-anchor="middle" font-size="12.5" fill="#78350f">Default Gateway: 192.168.1.1</text>
+    <text x="390" y="342" text-anchor="middle" font-size="12.5" fill="#78350f">Performs NAT + DHCP + DNS relay</text>
+  </g>
+
+  <!-- arrow 2 -->
+  <line x1="390" y1="358" x2="390" y2="430" stroke="#475569" stroke-width="2.5"/>
+  <polygon points="390,438 384,426 396,426" fill="#475569"/>
+  <text x="406" y="402" font-size="12" fill="#64748b">Private IP (LAN side)</text>
+
+  <!-- ===== DEVICE ===== -->
+  <g>
+    <rect x="250" y="438" width="280" height="118" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="390" y="470" text-anchor="middle" font-size="18" font-weight="700" fill="#166534">My MacBook Pro</text>
+    <text x="390" y="494" text-anchor="middle" font-size="12.5" fill="#14532d">Hostname: Sankets-MacBook-Pro.local</text>
+    <text x="390" y="514" text-anchor="middle" font-size="12.5" fill="#14532d">IPv4: 192.168.1.8  (en7, wired)</text>
+    <text x="390" y="534" text-anchor="middle" font-size="12.5" fill="#14532d">MAC: 9c:69:d3:79:13:f1</text>
+  </g>
+
+  <!-- DNS callout -->
+  <g>
+    <rect x="560" y="290" width="180" height="68" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="650" y="314" text-anchor="middle" font-size="13" font-weight="700" fill="#5b21b6">DNS Server</text>
+    <text x="650" y="334" text-anchor="middle" font-size="11.5" fill="#6d28d9">192.168.1.1 (router)</text>
+    <text x="650" y="350" text-anchor="middle" font-size="11.5" fill="#6d28d9">name → IP lookup</text>
+  </g>
+  <line x1="510" y1="312" x2="560" y2="312" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- legend -->
+  <g>
+    <text x="40" y="610" font-size="14" font-weight="700" fill="#0f172a">Flow of a request (e.g. opening google.com):</text>
+    <text x="40" y="636" font-size="12.5" fill="#334155">1. Device asks DNS to resolve "google.com" → gets an IP address.</text>
+    <text x="40" y="658" font-size="12.5" fill="#334155">2. Packet leaves device → sent to the Default Gateway (router).</text>
+    <text x="40" y="680" font-size="12.5" fill="#334155">3. Router applies NAT (private IP → public IP) and forwards to the Internet.</text>
+    <text x="40" y="702" font-size="12.5" fill="#334155">4. Response travels back the same path to the device.</text>
+    <text x="40" y="730" font-size="11" fill="#94a3b8">Values reflect this device's actual configuration on the local network (192.168.1.0/24).</text>
+  </g>
+</svg>
