@@ -35,7 +35,7 @@
     <text x="390" y="470" text-anchor="middle" font-size="18" font-weight="700" fill="#166534">My MacBook Pro</text>
     <text x="390" y="494" text-anchor="middle" font-size="12.5" fill="#14532d">Hostname: Sankets-MacBook-Pro.local</text>
     <text x="390" y="514" text-anchor="middle" font-size="12.5" fill="#14532d">IPv4: 192.168.1.8  (en7, wired)</text>
-    <text x="390" y="534" text-anchor="middle" font-size="12.5" fill="#14532d">MAC: 9c:69:d3:79:13:f1</text>
+    <text x="390" y="534" text-anchor="middle" font-size="12.5" fill="#14532d">MAC: 11:11:11:11:11:11</text>
   </g>
 
   <!-- DNS callout -->
