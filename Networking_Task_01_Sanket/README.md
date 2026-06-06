@@ -60,7 +60,7 @@ See `network_diagram.svg` (or `network_diagram.png`) in this folder.
      Router / Gateway   (192.168.1.1 — does NAT + DHCP + DNS relay)
             |
             v (wired / en7)
-      My MacBook Pro   (Private IP: 192.168.1.8, MAC: 9c:69:d3:79:13:f1)
+      My MacBook Pro   (Private IP: 192.168.1.8, MAC: 1:1:1:1:1:1:1)
 ```
 
 ---
