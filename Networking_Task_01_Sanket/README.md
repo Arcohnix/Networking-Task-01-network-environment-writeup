@@ -96,6 +96,6 @@ Networking_Task_01_Sanket/
 │   ├── ipconfig.png
 │   ├── ping.png
 │   └── tracert.png
-└── command_outputs.txt    <- (optional) raw text output of the commands
+└── command_outputs.txt    <- raw text output of the commands
 ```
 # Networking-Task-01-network-environment-writeup
